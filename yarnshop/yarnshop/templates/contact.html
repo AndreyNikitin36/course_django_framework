@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	{{ title|title }}
+	{{ tittle }}
+{% endblock %}
+
+{% block main_slider %}
+	<div class="hero">
+
+		{% block up_menu %}
+			<div class="header clearfix">
+				<a href="{% url 'index' %}" class="logo"></a>
+				<ul class="menu">
+				  <li><a href="{% url 'index' %}">домой</a></li>
+				  <li><a href="{% url 'products:index' %}">продукты</a></li>
+					<li><a href="{% url 'contact' %}" class="active">контакты</a></li>
+				</ul>
+			</div>
+		{% endblock %}
+
+		<h1>наши контакты</h1>
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% include 'inc_location.html' %}
+{% endblock %}
