@@ -1,5 +1,31 @@
 [
   {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2021-05-13T15:50:34.380Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "5",
+      "object_repr": "пробник",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2021-05-13T15:50:49.292Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "пробный продукт (пробник)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -288,10 +314,18 @@
     }
   },
   {
+    "model": "sessions.session",
+    "pk": "73x0p9lkuodz63mkt9m41gwbowz3314r",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pAZxAIu3fcMhGFGqRpISrsy3l2bdKHb_977LxXTupS4dpnjxOqsUB1-N0r5IXUDfE_11nRudZkn0puid9r12Fiel939Oyipl28NwTsUMewSkciAEKxFzu4KFCiAMQgYyAwA3h_9yaMlx9YGk4WNJPX-AM9NNzk:1lhDYx:xmwCQy4g3_tZzZBbNclHYT69qVq2MolkqA3CHdpv8tc",
+      "expire_date": "2021-05-27T15:47:47.719Z"
+    }
+  },
+  {
     "model": "mainapp.productcategory",
     "pk": 1,
     "fields": {
-      "name": "���",
+      "name": "ДОМ",
       "description": ""
     }
   },
@@ -299,7 +333,7 @@
     "model": "mainapp.productcategory",
     "pk": 2,
     "fields": {
-      "name": "����",
+      "name": "ОФИС",
       "description": ""
     }
   },
@@ -307,7 +341,7 @@
     "model": "mainapp.productcategory",
     "pk": 3,
     "fields": {
-      "name": "������",
+      "name": "МОДЕРН",
       "description": ""
     }
   },
@@ -315,7 +349,15 @@
     "model": "mainapp.productcategory",
     "pk": 4,
     "fields": {
-      "name": "��������",
+      "name": "КЛАССИКА",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 5,
+    "fields": {
+      "name": "пробник",
       "description": ""
     }
   },
@@ -324,9 +366,9 @@
     "pk": 1,
     "fields": {
       "category": 3,
-      "name": "����� ����������",
+      "name": "Лампа настольная",
       "image": "products_images/product-3-sm_HhxPbhQ.jpg",
-      "short_desc": "������ ������� �����",
+      "short_desc": "Просто хорошая лампа",
       "description": "",
       "price": "0.00",
       "quantity": 10
@@ -337,9 +379,9 @@
     "pk": 2,
     "fields": {
       "category": 2,
-      "name": "���� �������",
+      "name": "Стул твердый",
       "image": "products_images/product-4_phb2Rm0.jpg",
-      "short_desc": "������� ����",
+      "short_desc": "хороший стул",
       "description": "",
       "price": "2000.00",
       "quantity": 10
@@ -350,20 +392,33 @@
     "pk": 3,
     "fields": {
       "category": 1,
-      "name": "����� ������",
+      "name": "Диван мягкий",
       "image": "products_images/product-1.jpg",
-      "short_desc": "����� ������ �����",
+      "short_desc": "Очень мягкий диван",
       "description": "",
       "price": "1000.00",
       "quantity": 34
     }
   },
   {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 5,
+      "name": "пробный продукт",
+      "image": "",
+      "short_desc": "",
+      "description": "",
+      "price": "0.00",
+      "quantity": 0
+    }
+  },
+  {
     "model": "authapp.shopuser",
     "pk": 1,
     "fields": {
-      "password": "pbkdf2_sha256$260000$XZ8rEsMGZ6wBhQXkkUPHeo$pFap2peEBq82WfaSuJAt9mC2+wyY6lPUWKcZxnGFulI=",
-      "last_login": "2021-05-11T16:30:38.438Z",
+      "password": "pbkdf2_sha256$260000$piZc88p08v3tzRvNuz88xW$XrikQt9qv/iszrsRyAAIBG665cavh2GatSyHvGGzbG0=",
+      "last_login": "2021-05-13T15:47:47.563Z",
       "is_superuser": true,
       "username": "django",
       "first_name": "",
@@ -371,7 +426,7 @@
       "email": "django@geekshop.local",
       "is_staff": true,
       "is_active": true,
-      "date_joined": "2021-05-11T16:30:14.004Z",
+      "date_joined": "2021-05-13T15:45:39.020Z",
       "avatar": "",
       "age": 33,
       "groups": [],

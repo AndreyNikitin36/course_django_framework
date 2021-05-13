@@ -3,7 +3,6 @@ from .models import ProductCategory, Product
 
 
 def products(request, pk=None):
-    print(pk)
     links_menu = {'links': [
         {'href': 'index', 'name': 'все'},
         {'href': 'index', 'name': 'дом'},

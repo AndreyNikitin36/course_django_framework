@@ -18,3 +18,4 @@ def contact(request):
         'tittle': 'Контакты',
     }
     return render(request, 'contact.html', context=content)
+

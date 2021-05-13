@@ -10,14 +10,7 @@
 {% block main_slider %}
 	<div class="hero-white">
 		{% block up_menu %}
-			<div class="header clearfix">
-				<a href="{% url 'index' %}" class="logo"></a>
-				<ul class="menu">
-					<li><a href="{% url 'index' %}">домой</a></li>
-					<li><a href="{% url 'products:index' %}" class="active">продукты</a></li>
-					<li><a href="{% url 'contact' %}">контакты</a></li>
-				</ul>
-			</div>
+			{% include 'inc_up_menu.html' %}
 		{% endblock %}
 	</div>
 {% endblock %}
