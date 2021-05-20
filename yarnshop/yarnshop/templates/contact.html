@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	{{ title|title }}
+{% endblock %}
+
+{% block main_slider %}
+	<div class="hero">
+		{% include 'inc_up_menu.html' %}
+		<h1>наши контакты</h1>
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% include 'inc_location.html' %}
+{% endblock %}
