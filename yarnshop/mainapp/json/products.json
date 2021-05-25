@@ -1,0 +1,29 @@
+[
+  {
+      "category": "МОДЕРН",
+      "name": "Лампа настольная",
+      "image": "products_images/product-3-sm_HhxPbhQ.jpg",
+      "short_desc": "Просто хорошая лампа",
+      "description": "",
+      "price": "0.00",
+      "quantity": 10
+  },
+  {
+      "category": "ОФИС",
+      "name": "Стул твердый",
+      "image": "products_images/product-4_phb2Rm0.jpg",
+      "short_desc": "хороший стул",
+      "description": "",
+      "price": "2000.00",
+      "quantity": 10
+  },
+  {
+      "category": "ДОМ",
+      "name": "Диван мягкий",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "Очень мягкий диван",
+      "description": "",
+      "price": "1000.00",
+      "quantity": 34
+  }
+]
