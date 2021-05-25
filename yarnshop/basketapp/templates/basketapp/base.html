@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		{% block title %}
+            {{ title|title }}
+        {% endblock %}
+	</title>
+	{% block css %}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+	{% endblock %}
+
+	{% block js %}
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="{% static 'basketapp/js/basket.js' %}"></script>
+	{% endblock %}
+
+</head>
+<body>
+	<div class="basket_container">
+		{% block main_slider %}
+				{% include 'inc_up_menu.html' %}
+        {% endblock %}
+		<div class="h2 text-center head">
+		  Ваша корзина,
+		  {% if user.first_name %}
+			{{ user.first_name|title}}
+		  {% else %}
+			Пользователь
+		  {% endif %}
+		</div>
+
+		{% block content %}
+			{% include 'basketapp/inc_basket_list.html' %}
+		{% endblock %}
+  	</div>
+	{% block footer %}
+		{% include 'inc_footer.html' %}
+	{% endblock %}
+</body>
+</html>

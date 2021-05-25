@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|title }}
+{% endblock %}
+
+{% block main_slider %}
+<div class="hero-white">
+    {% include 'inc_up_menu.html' %}
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="details">
+        <div class="links clearfix">
+            {% include 'mainapp/inc_product_menu.html' %}
+        </div>
+        <div class="row my-5">
+            <div class="col-6">
+                <div class="slider-control ml-2 my-3">
+                    <div class="block">
+                        <a href="#"><img src="/media/{{ hot_product.image }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <h3 class="big-bold">{{ hot_product.name }}</h3>
+                <h3 class="red">горячее предложение</h3>
+                <p class="price">{{ hot_product.price }} <span>руб</span></p>
+                <a href="{% url 'products:product' hot_product.pk %}" class="red-button">
+                    заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <div class="description-text">
+                    {{ hot_product.description }}
+                </div>
+            </div>
+        </div>
+
+        <div class="related">
+            <div class="title clearfix">
+                <h2>Похожие продукты</h2>
+                <a class="explore" href="#">показать все <img src="/static/img/arrow.png" alt=""></a>
+            </div>
+            <div class="related-products clearfix">
+                {% for same_product in same_products %}
+                    <div class="block">
+                        <a href="{% url 'products:product' same_product.pk %}">
+                            <img src="/media/{{ same_product.image }}" alt="{{ product.short_desc }}">
+                            <div class="text">
+                                <img src="/static/img/icon-hover.png" alt="img">
+                                <h4>{{ same_product.name }}</h4>
+                                <p>{{ same_product.description }} </p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
