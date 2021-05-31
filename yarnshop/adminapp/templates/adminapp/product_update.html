@@ -1,0 +1,24 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block content %}
+    <div class="row">
+        <div class="text-center">
+            <img src="{{ edit_product.image|media_folder_products }}" class="w-25">
+        </div>
+    </div>
+    <div class="row">
+        <form class="form-horizontal" action="{% url 'admin:product_update' object.pk %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="form-control" type="submit" value="сохранить">
+        </form>
+        <button class="btn btn-round form-control last">
+            <a href="{% url 'admin:categories' %}" class="">
+                к категориям
+            </a>
+        </button>
+    </div>
+    </div>
+{% endblock %}
